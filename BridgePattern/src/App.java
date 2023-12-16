@@ -1,22 +1,9 @@
-
-
-
 public class App {
-    public static void main(String[] args) {
-        testDevice(new Tv());
-        testDevice(new Radio());
-    }
+    public static void main(String[] args) throws Exception {
 
-    public static void testDevice(Device device) {
-        System.out.println("Tests with basic remote.");
-        BasicRemote basicRemote = new BasicRemote(device);
-        basicRemote.power();
-        device.printStatus();
+        Shape square = new Square(new Blue());
+        System.out.println(square.draw());
 
-        System.out.println("Tests with advanced remote.");
-        AdvancedRemote advancedRemote = new AdvancedRemote(device);
-        advancedRemote.power();
-        advancedRemote.mute();
-        device.printStatus();
+
     }
 }
